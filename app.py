@@ -36,3 +36,4 @@ def generate_simple_password():
     return {"password": password},200
 
 import services.password_length
+import services.password_customize
