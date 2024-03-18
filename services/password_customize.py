@@ -6,7 +6,7 @@ import string
 import secrets
 from flask import request
 
-@app.route("/generate-password-customize", methods=['GET'])
+@app.route("/generate-password-customize", methods=['GET', 'POST'])
 def generate_password_customize():
     """Endpoint generate default password for customized counts of elements"""
     busqueda_params = request.get_json()
