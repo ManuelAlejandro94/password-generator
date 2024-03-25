@@ -37,3 +37,4 @@ def generate_simple_password():
 
 import services.password_length
 import services.password_customize
+import services.password_exact
