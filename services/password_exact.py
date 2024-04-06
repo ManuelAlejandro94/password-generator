@@ -2,7 +2,7 @@ from flask import  request
 from app import app
 from utils.logs import create_log_id
 from utils.validate import validate_params
-from utils.responses import ResponseErrorBadRequest as BadRequest, ResponseOk as Ok
+from api_responses.responses import ResponseOk as Ok, ResponseErrorBadRequest as BadRequest
 import string
 import secrets
 import random

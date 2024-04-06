@@ -1,7 +1,7 @@
 from app import app
 from utils.logs import create_log_id
 from utils.validate import validate_params
-from utils.responses import ResponseErrorBadRequest as BadRequest, ResponseOk as Ok
+from api_responses.responses import ResponseErrorBadRequest as BadRequest, ResponseOk as Ok
 import string
 import secrets
 from flask import request
