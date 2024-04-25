@@ -3,6 +3,7 @@ import secrets
 import string
 from logging.config import dictConfig
 from utils.logs import create_log_id
+from services.v2.generate_password import generate_password_bp
 
 dictConfig({
     'version': 1,
@@ -38,3 +39,5 @@ def generate_simple_password():
 import services.password_length
 import services.password_customize
 import services.password_exact
+
+app.register_blueprint(generate_password_bp, url_prefix="/v2")
