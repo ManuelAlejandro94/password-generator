@@ -5,6 +5,7 @@ from logging.config import dictConfig
 from utils.logs import create_log_id
 from services.v2.generate_password import generate_password_bp
 from services.v2.password_customize import password_customize_bp
+from services.v2.password_exact import password_exact_bp
 
 dictConfig({
     'version': 1,
@@ -43,3 +44,4 @@ import services.password_exact
 
 app.register_blueprint(generate_password_bp, url_prefix="/v2")
 app.register_blueprint(password_customize_bp, url_prefix="/v2")
+app.register_blueprint(password_exact_bp, url_prefix="/v2")
