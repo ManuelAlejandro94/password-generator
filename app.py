@@ -7,6 +7,7 @@ from services.v2.generate_password import generate_password_bp
 from services.v2.password_customize import password_customize_bp
 from services.v2.password_exact import password_exact_bp
 from services.v2.password_length import password_length_bp
+from flask_cors import CORS
 
 dictConfig({
     'version': 1,
@@ -25,6 +26,7 @@ dictConfig({
 })
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/generate-password", methods=['GET'])
 def generate_simple_password():
