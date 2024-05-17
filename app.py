@@ -7,6 +7,7 @@ from services.v2.generate_password import generate_password_bp
 from services.v2.password_customize import password_customize_bp
 from services.v2.password_exact import password_exact_bp
 from services.v2.password_length import password_length_bp
+from services.v2.iphone_password import iphone_password_bp
 from flask_cors import CORS
 
 dictConfig({
@@ -49,3 +50,4 @@ app.register_blueprint(generate_password_bp, url_prefix="/v2")
 app.register_blueprint(password_customize_bp, url_prefix="/v2")
 app.register_blueprint(password_exact_bp, url_prefix="/v2")
 app.register_blueprint(password_length_bp, url_prefix="/v2")
+app.register_blueprint(iphone_password_bp, url_prefix="/v2")
