@@ -1,12 +1,17 @@
-FROM python:3.8-alpine
+FROM python:3.12-slim
 
-RUN apk add --no-cache python3-dev \
-    && pip3 install --upgrade pip
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-COPY . /app
+COPY requirements.txt .
 
-RUN pip3 install -r requirements.txt --no-cache-dir
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
-CMD [ "flask", "--app", "app", "run","--host","0.0.0.0","--port","5000"]
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python", "-m", "flask", "--app", "app", "run", "--host", "0.0.0.0", "--port", "5000"]
