@@ -8,7 +8,7 @@ Validate images:
 dokcer images
 ```
 
-Run image console interactivr:
+Run image console interactive:
 ```
 docker run -it password-generator-api /bin/sh
 ```

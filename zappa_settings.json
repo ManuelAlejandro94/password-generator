@@ -11,7 +11,7 @@
         ],
         "profile_name": "default",
         "project_name": "password-genera",
-        "runtime": "python3.8",
+        "runtime": "python3.12",
         "s3_bucket": "zappa-password-generator"
     }
 }
